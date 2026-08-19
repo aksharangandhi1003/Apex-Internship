@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akshara | Personal Profile</title>
+
+    <style>
+
+        /* ==============================
+           GOOGLE FONT
+        ============================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+        /* ==============================
+           ROOT VARIABLES
+        ============================== */
+
+        :root {
+            --primary: #7c3aed;
+            --secondary: #a855f7;
+            --accent: #ec4899;
+
+            --bg: #f8f7ff;
+            --card: #ffffff;
+            --text: #171329;
+            --text-light: #66627a;
+            --border: #e8e4f5;
+
+            --shadow: 0 15px 40px rgba(88, 63, 150, 0.12);
+
+            --nav-bg: rgba(255, 255, 255, 0.85);
+        }
+
+
+        /* ==============================
+           DARK MODE VARIABLES
+        ============================== */
+
+        body.dark {
+            --bg: #0d0b16;
+            --card: #171321;
+            --text: #f7f3ff;
+            --text-light: #aaa3bd;
+            --border: #2b2538;
+
+            --shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+            --nav-bg: rgba(13, 11, 22, 0.88);
+        }
+
+
+        /* ==============================
+           BASIC RESET
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            transition: 0.4s ease;
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            background: var(--nav-bg);
+            backdrop-filter: blur(15px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 18px 8%;
+
+            z-index: 1000;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                var(--accent)
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        /* ==============================
+           DARK MODE BUTTON
+        ============================== */
+
+        #themeButton {
+            border: none;
+
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: var(--card);
+            color: var(--text);
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            box-shadow: var(--shadow);
+
+            transition: 0.3s;
+        }
+
+
+        #themeButton:hover {
+            transform: rotate(20deg) scale(1.08);
+        }
+
+
+        /* ==============================
+           MOBILE MENU BUTTON
+        ============================== */
+
+        .menu-button {
+            display: none;
+
+            border: none;
+            background: transparent;
+
+            font-size: 25px;
+            color: var(--text);
+
+            cursor: pointer;
+        }
+
+
+        /* ==============================
+           HERO SECTION
+        ============================== */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 8% 80px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* Background circles */
+
+        .circle {
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(1px);
+
+            z-index: -1;
+        }
+
+
+        .circle.one {
+            width: 350px;
+            height: 350px;
+
+            background: rgba(124, 58, 237, 0.12);
+
+            top: 10%;
+            left: -100px;
+        }
+
+
+        .circle.two {
+            width: 300px;
+            height: 300px;
+
+            background: rgba(236, 72, 153, 0.12);
+
+            bottom: 5%;
+            right: -80px;
+        }
+
+
+        .hero-container {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        /* ==============================
+           HERO TEXT
+        ============================== */
+
+        .greeting {
+            color: var(--primary);
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            margin-bottom: 10px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+
+            font-weight: 800;
+        }
+
+
+        .hero h1 span {
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                var(--accent)
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .typing {
+            font-size: 25px;
+
+            color: var(--text-light);
+
+            font-weight: 500;
+
+            min-height: 40px;
+        }
+
+
+        .description {
+            max-width: 650px;
+
+            margin-top: 20px;
+
+            color: var(--text-light);
+
+            line-height: 1.8;
+
+            font-size: 16px;
+        }
+
+
+        /* ==============================
+           HERO BUTTONS
+        ============================== */
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 30px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .btn {
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+        }
+
+
+        .primary-btn {
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                var(--secondary)
+            );
+
+            color: white;
+
+            border: none;
+
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+        }
+
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 30px rgba(124, 58, 237, 0.4);
+        }
+
+
+        .secondary-btn {
+            border: 1px solid var(--border);
+
+            background: var(--card);
+
+            color: var(--text);
+        }
+
+
+        .secondary-btn:hover {
+            transform: translateY(-3px);
+
+            border-color: var(--primary);
+        }
+
+
+        /* ==============================
+           PROFILE CARD
+        ============================== */
+
+        .profile-wrapper {
+            display: flex;
+
+            justify-content: center;
+
+            position: relative;
+        }
+
+
+        .profile-card {
+            width: 330px;
+
+            background: var(--card);
+
+            padding: 35px;
+
+            border-radius: 30px;
+
+            box-shadow: var(--shadow);
+
+            border: 1px solid var(--border);
+
+            text-align: center;
+
+            position: relative;
+
+            transition: 0.4s;
+        }
+
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+
+            border-radius: 50%;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 65px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--accent)
+                );
+
+            color: white;
+
+            border: 7px solid var(--bg);
+
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.25);
+        }
+
+
+        .profile-card h2 {
+            margin-top: 20px;
+
+            font-size: 25px;
+        }
+
+
+        .profile-card p {
+            color: var(--text-light);
+
+            margin-top: 5px;
+        }
+
+
+        .status {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 15px;
+
+            background: rgba(34, 197, 94, 0.1);
+
+            color: #22c55e;
+
+            padding: 7px 14px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+        }
+
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+
+            background: #22c55e;
+
+            border-radius: 50%;
+        }
+
+
+        /* ==============================
+           SECTIONS
+        ============================== */
+
+        section {
+            padding: 90px 8%;
+        }
+
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .section-title small {
+            color: var(--primary);
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title h2 {
+            font-size: 40px;
+
+            margin-top: 8px;
+        }
+
+
+        .section-title p {
+            color: var(--text-light);
+
+            max-width: 600px;
+
+            margin: 10px auto;
+        }
+
+
+        /* ==============================
+           ABOUT
+        ============================== */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+
+        .about-card {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            box-shadow: var(--shadow);
+
+            transition: 0.3s;
+        }
+
+
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .about-card h3 {
+            font-size: 22px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .about-card p {
+            color: var(--text-light);
+
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           SKILLS
+        ============================== */
+
+        .skills {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .skill {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            transition: 0.3s;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .skill:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--primary);
+        }
+
+
+        .skill-icon {
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .skill h3 {
+            font-size: 17px;
+        }
+
+
+        .skill p {
+            font-size: 12px;
+
+            color: var(--text-light);
+
+            margin-top: 5px;
+        }
+
+
+        /* ==============================
+           INTERESTS
+        ============================== */
+
+        .interest-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .interest {
+            padding: 30px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+
+        .interest:hover {
+            transform: scale(1.03);
+
+            border-color: var(--primary);
+        }
+
+
+        .interest span {
+            font-size: 35px;
+        }
+
+
+        .interest h3 {
+            margin-top: 15px;
+        }
+
+
+        .interest p {
+            color: var(--text-light);
+
+            font-size: 14px;
+
+            margin-top: 8px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           CONTACT
+        ============================== */
+
+        .contact-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--accent)
+                );
+
+            color: white;
+
+            padding: 60px 30px;
+
+            border-radius: 30px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 50px
+                rgba(124, 58, 237, 0.25);
+        }
+
+
+        .contact-box h2 {
+            font-size: 35px;
+        }
+
+
+        .contact-box p {
+            margin: 15px auto 25px;
+
+            max-width: 550px;
+
+            opacity: 0.9;
+
+            line-height: 1.7;
+        }
+
+
+        .contact-btn {
+            background: white;
+
+            color: #6d28d9;
+
+            border: none;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            text-align: center;
+
+            padding: 30px;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--text-light);
+
+            font-size: 13px;
+        }
+
+
+        /* ==============================
+           BACK TO TOP
+        ============================== */
+
+        #topButton {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background: var(--primary);
+
+            color: white;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            display: none;
+
+            z-index: 900;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        /* ==============================
+           SCROLL ANIMATION
+        ============================== */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(40px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+
+        .reveal.active {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* ==============================
+           TABLET VIEW
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+
+            .description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+
+            .profile-wrapper {
+                margin-top: 20px;
+            }
+
+
+            .skills {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .interest-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* ==============================
+           PHONE VIEW
+        ============================== */
+
+        @media (max-width: 650px) {
+
+            nav {
+                padding: 15px 6%;
+            }
+
+
+            .nav-links {
+                position: absolute;
+
+                top: 70px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: var(--nav-bg);
+
+                backdrop-filter: blur(15px);
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 20px;
+
+                gap: 20px;
+
+                display: none;
+
+                border-bottom: 1px solid var(--border);
+            }
+
+
+            .nav-links.show {
+                display: flex;
+            }
+
+
+            .menu-button {
+                display: block;
+            }
+
+
+            .hero {
+                padding: 120px 6% 70px;
+            }
+
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+
+            .typing {
+                font-size: 19px;
+            }
+
+
+            section {
+                padding: 70px 6%;
+            }
+
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+
+            .profile-card {
+                width: 100%;
+
+                max-width: 330px;
+            }
+
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .skills {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 12px;
+            }
+
+
+            .skill {
+                padding: 20px 10px;
+            }
+
+
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-box {
+                padding: 45px 20px;
+            }
+
+
+            .contact-box h2 {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         NAVIGATION
+    ============================== -->
+
+    <nav>
+
+        <div class="logo">
+            Akshara.
+        </div>
+
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#interests">Interests</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+
+        <div class="nav-buttons">
+
+            <button id="themeButton" title="Change Theme">
+                🌙
+            </button>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                title="Menu">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==============================
+         HERO SECTION
+    ============================== -->
+
+    <section class="hero" id="home">
+
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+
+
+        <div class="hero-container">
+
+
+            <div class="hero-content reveal">
+
+                <div class="greeting" id="greeting">
+                    Hello! 👋
+                </div>
+
+
+                <h1>
+                    I'm <span>Akshara</span>
+                </h1>
+
+
+                <div class="typing" id="typingText">
+                    AIML Student
+                </div>
+
+
+                <p class="description">
+
+                    Welcome to my personal space on the web!
+                    I am a student passionate about technology,
+                    creativity and building interesting digital
+                    experiences.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#about"
+                        class="btn primary-btn">
+
+                        Explore My Profile →
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn secondary-btn">
+
+                        Let's Connect
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROFILE CARD -->
+
+            <div class="profile-wrapper reveal">
+
+                <div class="profile-card">
+
+                    <div class="profile-image">
+                        👩🏻‍💻
+                    </div>
+
+
+                    <h2>
+                        Akshara Gandhi
+                    </h2>
+
+
+                    <p>
+                        AIML Student
+                    </p>
+
+
+                    <div class="status">
+
+                        <span class="status-dot"></span>
+
+                        Available to Learn & Create
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         ABOUT SECTION
+    ============================== -->
+
+    <section id="about">
+
+        <div class="section-title reveal">
+
+            <small>Get to know me</small>
+
+            <h2>About Me</h2>
+
+            <p>
+                A little introduction about who I am
+                and what I enjoy doing.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-card reveal">
+
+                <h3>
+                    👩‍💻 Who Am I?
+                </h3>
+
+                <p>
+
+                    I am Akshara, a student with a strong
+                    interest in Artificial Intelligence,
+                    Machine Learning and Web Development.
+
+                    I enjoy learning new technologies,
+                    experimenting with ideas and turning
+                    concepts into practical projects.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="about-card reveal">
+
+                <h3>
+                    🚀 My Goal
+                </h3>
+
+                <p>
+
+                    My goal is to continuously improve my
+                    technical skills, explore innovative
+                    technologies and create meaningful
+                    projects that combine technology
+                    with creativity.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         SKILLS SECTION
+    ============================== -->
+
+    <section id="skills">
+
+        <div class="section-title reveal">
+
+            <small>What I Learn</small>
+
+            <h2>My Skills</h2>
+
+            <p>
+                Technologies and areas I am interested in.
+            </p>
+
+        </div>
+
+
+        <div class="skills">
+
+
+            <div class="skill reveal">
+
+                <div class="skill-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Artificial Intelligence
+                </h3>
+
+                <p>
+                    AI concepts & applications
+                </p>
+
+            </div>
+
+
+
+            <div class="skill reveal">
+
+                <div class="skill-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+                    Learning ML fundamentals
+                </p>
+
+            </div>
+
+
+
+            <div class="skill reveal">
+
+                <div class="skill-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    HTML, CSS & JavaScript
+                </p>
+
+            </div>
+
+
+
+            <div class="skill reveal">
+
+                <div class="skill-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+                    Problem solving & coding
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         INTERESTS SECTION
+    ============================== -->
+
+    <section id="interests">
+
+        <div class="section-title reveal">
+
+            <small>Beyond Coding</small>
+
+            <h2>My Interests</h2>
+
+            <p>
+                Things I enjoy exploring in technology
+                and everyday life.
+            </p>
+
+        </div>
+
+
+        <div class="interest-grid">
+
+
+            <div class="interest reveal">
+
+                <span>🤖</span>
+
+                <h3>
+                    Artificial Intelligence
+                </h3>
+
+                <p>
+                    Exploring how intelligent systems
+                    can solve real-world problems.
+                </p>
+
+            </div>
+
+
+
+            <div class="interest reveal">
+
+                <span>💻</span>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Creating websites and experimenting
+                    with interactive web experiences.
+                </p>
+
+            </div>
+
+
+
+            <div class="interest reveal">
+
+                <span>📸</span>
+
+                <h3>
+                    Photography
+                </h3>
+
+                <p>
+                    Capturing moments and exploring
+                    creative visual ideas.
+                </p>
+
+            </div>
+
+
+
+            <div class="interest reveal">
+
+                <span>✈️</span>
+
+                <h3>
+                    Traveling
+                </h3>
+
+                <p>
+                    Exploring new places, cultures
+                    and experiences.
+                </p>
+
+            </div>
+
+
+
+            <div class="interest reveal">
+
+                <span>✨</span>
+
+                <h3>
+                    Creativity
+                </h3>
+
+                <p>
+                    Combining technology and creativity
+                    to create something unique.
+                </p>
+
+            </div>
+
+
+
+            <div class="interest reveal">
+
+                <span>📚</span>
+
+                <h3>
+                    Learning
+                </h3>
+
+                <p>
+                    Continuously learning new skills
+                    and technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         CONTACT SECTION
+    ============================== -->
+
+    <section id="contact">
+
+        <div class="contact-box reveal">
+
+            <h2>
+                Let's Connect! 💜
+            </h2>
+
+
+            <p>
+
+                Thank you for visiting my profile.
+                I am always excited to learn,
+                create and explore new ideas.
+
+            </p>
+
+
+            <button
+                class="contact-btn"
+                onclick="showMessage()">
+
+                Say Hello 👋
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Akshara Gandhi
+        </p>
+
+        <p>
+            Made with ❤️ & HTML
+        </p>
+
+    </footer>
+
+
+
+    <!-- BACK TO TOP -->
+
+    <button id="topButton">
+        ↑
+    </button>
+
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+
+    <script>
+
+
+        /* ==============================
+           TIME BASED GREETING
+        ============================== */
+
+        const greeting =
+            document.getElementById("greeting");
+
+
+        const hour =
+            new Date().getHours();
+
+
+        if (hour < 12) {
+
+            greeting.innerHTML =
+                "Good Morning! ☀️";
+
+        }
+
+        else if (hour < 18) {
+
+            greeting.innerHTML =
+                "Good Afternoon! 🌤️";
+
+        }
+
+        else {
+
+            greeting.innerHTML =
+                "Good Evening! 🌙";
+
+        }
+
+
+
+        /* ==============================
+           TYPING EFFECT
+        ============================== */
+
+        const typingText =
+            document.getElementById("typingText");
+
+
+        const words = [
+
+            "AIML Student 🤖",
+
+            "Web Development Enthusiast 🌐",
+
+            "Tech Explorer 💻",
+
+            "Creative Learner ✨"
+
+        ];
+
+
+        let wordIndex = 0;
+
+        let characterIndex = 0;
+
+        let deleting = false;
+
+
+        function typeEffect() {
+
+            const currentWord =
+                words[wordIndex];
+
+
+            if (!deleting) {
+
+                characterIndex++;
+
+                typingText.textContent =
+                    currentWord.substring(
+                        0,
+                        characterIndex
+                    );
+
+            }
+
+            else {
+
+                characterIndex--;
+
+                typingText.textContent =
+                    currentWord.substring(
+                        0,
+                        characterIndex
+                    );
+
+            }
+
+
+            let speed = deleting
+                ? 50
+                : 100;
+
+
+            if (!deleting &&
+                characterIndex === currentWord.length) {
+
+                speed = 1500;
+
+                deleting = true;
+
+            }
+
+
+            else if (
+                deleting &&
+                characterIndex === 0
+            ) {
+
+                deleting = false;
+
+                wordIndex++;
+
+                if (wordIndex >= words.length) {
+
+                    wordIndex = 0;
+
+                }
+
+                speed = 500;
+
+            }
+
+
+            setTimeout(
+                typeEffect,
+                speed
+            );
+
+        }
+
+
+        typeEffect();
+
+
+
+        /* ==============================
+           DARK / LIGHT MODE
+        ============================== */
+
+        const themeButton =
+            document.getElementById("themeButton");
+
+
+        themeButton.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle(
+                    "dark"
+                );
+
+
+                if (
+                    document.body.classList.contains(
+                        "dark"
+                    )
+                ) {
+
+                    themeButton.innerHTML =
+                        "☀️";
+
+                    localStorage.setItem(
+                        "theme",
+                        "dark"
+                    );
+
+                }
+
+                else {
+
+                    themeButton.innerHTML =
+                        "🌙";
+
+                    localStorage.setItem(
+                        "theme",
+                        "light"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* ==============================
+           REMEMBER THEME
+        ============================== */
+
+        const savedTheme =
+            localStorage.getItem("theme");
+
+
+        if (savedTheme === "dark") {
+
+            document.body.classList.add("dark");
+
+            themeButton.innerHTML = "☀️";
+
+        }
+
+
+
+        /* ==============================
+           MOBILE MENU
+        ============================== */
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuButton.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle(
+                    "show"
+                );
+
+            }
+        );
+
+
+        /* Close menu after clicking */
+
+        document.querySelectorAll(
+            ".nav-links a"
+        ).forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    navLinks.classList.remove(
+                        "show"
+                    );
+
+                }
+            );
+
+        });
+
+
+
+        /* ==============================
+           SCROLL REVEAL
+        ============================== */
+
+        const reveals =
+            document.querySelectorAll(
+                ".reveal"
+            );
+
+
+        function revealOnScroll() {
+
+            reveals.forEach(
+                function (element) {
+
+                    const windowHeight =
+                        window.innerHeight;
+
+                    const elementTop =
+                        element.getBoundingClientRect()
+                        .top;
+
+                    const visiblePoint = 100;
+
+
+                    if (
+                        elementTop <
+                        windowHeight -
+                        visiblePoint
+                    ) {
+
+                        element.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            revealOnScroll
+        );
+
+
+        revealOnScroll();
+
+
+
+        /* ==============================
+           BACK TO TOP BUTTON
+        ============================== */
+
+        const topButton =
+            document.getElementById(
+                "topButton"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 500) {
+
+                    topButton.style.display =
+                        "block";
+
+                }
+
+                else {
+
+                    topButton.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        topButton.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+
+
+        /* ==============================
+           CONTACT BUTTON
+        ============================== */
+
+        function showMessage() {
+
+            alert(
+                "Hey! 👋 Thanks for visiting my profile! 💜"
+            );
+
+        }
+
+
+   </script>
+
+</body>
+
+</html>

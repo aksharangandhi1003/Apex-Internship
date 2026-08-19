@@ -1,0 +1,750 @@
+/* =====================================
+   TASK 2 - CSS
+===================================== */
+
+
+/* =====================================
+   BASIC RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f6f5fb;
+
+    color: #222;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   NAVIGATION
+   FLEXBOX
+===================================== */
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background: white;
+
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    color: #6c3ce9;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+
+    color: #6c3ce9;
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+
+    min-height: 65vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee8ff,
+            #ffffff,
+            #f8eaff
+        );
+}
+
+
+.hero-content {
+
+    max-width: 800px;
+}
+
+
+.welcome {
+
+    color: #6c3ce9;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.hero h1 {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 span {
+
+    color: #6c3ce9;
+}
+
+
+.intro {
+
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    background: #6c3ce9;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.hero-button:hover {
+
+    background: #5428c5;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   TASK SECTION
+===================================== */
+
+.task-section {
+
+    padding: 80px 8%;
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading h2 {
+
+    font-size: 38px;
+}
+
+
+.section-heading p {
+
+    color: #777;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================
+   MAIN GRID
+   CSS GRID
+===================================== */
+
+.main-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =====================================
+   CARDS
+===================================== */
+
+.card {
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.08);
+}
+
+
+.card h2 {
+
+    color: #6c3ce9;
+
+    margin-bottom: 8px;
+}
+
+
+.card-text {
+
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   CONTACT FORM
+===================================== */
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    font-family: inherit;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #6c3ce9;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(108,60,233,0.1);
+}
+
+
+.form-group textarea {
+
+    height: 120px;
+
+    resize: vertical;
+}
+
+
+/* =====================================
+   ERROR MESSAGE
+===================================== */
+
+.form-group small {
+
+    display: block;
+
+    color: #e53935;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* =====================================
+   SUBMIT BUTTON
+===================================== */
+
+.submit-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #6c3ce9;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.submit-button:hover {
+
+    background: #5428c5;
+}
+
+
+/* =====================================
+   SUCCESS MESSAGE
+===================================== */
+
+.success-message {
+
+    color: #16843b;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   TODO INPUT
+   FLEXBOX
+===================================== */
+
+.todo-input {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.todo-input input {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.todo-input input:focus {
+
+    border-color: #6c3ce9;
+}
+
+
+.todo-input button {
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #6c3ce9;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.todo-input button:hover {
+
+    background: #5428c5;
+}
+
+
+/* =====================================
+   TODO LIST
+===================================== */
+
+#todoList {
+
+    list-style: none;
+}
+
+
+.empty-message {
+
+    text-align: center;
+
+    color: #999;
+
+    padding: 20px;
+}
+
+
+.todo-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    background: #f3efff;
+
+    border-left: 4px solid #6c3ce9;
+
+    border-radius: 8px;
+}
+
+
+.task-text {
+
+    flex: 1;
+
+    word-break: break-word;
+}
+
+
+.task-buttons {
+
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.done-button,
+.delete-button {
+
+    border: none;
+
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.done-button {
+
+    background: #22a06b;
+}
+
+
+.delete-button {
+
+    background: #e53935;
+}
+
+
+.completed {
+
+    text-decoration: line-through;
+
+    color: #999;
+}
+
+
+/* =====================================
+   FEATURE CARDS
+   CSS GRID
+===================================== */
+
+.features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+}
+
+
+.feature-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.08);
+}
+
+
+.feature-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+
+.feature-card p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    background: #171321;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+footer strong {
+
+    color: #a77bff;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 900px) {
+
+    .main-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .features {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 600px) {
+
+    nav {
+
+        padding: 15px 5%;
+    }
+
+
+    .nav-links {
+
+        gap: 12px;
+
+        font-size: 12px;
+    }
+
+
+    .hero {
+
+        min-height: 60vh;
+
+        padding: 60px 5%;
+    }
+
+
+    .hero h1 {
+
+        font-size: 38px;
+    }
+
+
+    .intro {
+
+        font-size: 15px;
+    }
+
+
+    .task-section {
+
+        padding: 60px 5%;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 30px;
+    }
+
+
+    .card {
+
+        padding: 23px;
+    }
+
+
+    .todo-input {
+
+        flex-direction: column;
+    }
+
+
+    .todo-input button {
+
+        width: 100%;
+    }
+
+
+    .features {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .todo-item {
+
+        align-items: flex-start;
+    }
+
+
+    .task-buttons {
+
+        flex-direction: column;
+    }
+
+}

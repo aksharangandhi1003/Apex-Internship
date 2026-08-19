@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akshara | Task 2</title>
+
+    <!-- Task 2 CSS -->
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+            Akshara.
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+            <li>
+                <a href="#todo">To-Do</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                Welcome to my website 👋
+            </p>
+
+            <h1>
+                Hi, I'm
+                <span>Akshara</span>
+            </h1>
+
+            <p class="intro">
+
+                AIML student and technology enthusiast
+                exploring web development and programming.
+
+            </p>
+
+            <a
+                href="#contact"
+                class="hero-button">
+
+                Contact Me
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TASK 2 SECTION
+    ========================== -->
+
+    <section class="task-section">
+
+
+        <div class="section-heading">
+
+            <h2>
+                Interactive Webpage
+            </h2>
+
+            <p>
+                Contact Form and Dynamic To-Do List
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             MAIN GRID
+        ========================== -->
+
+        <div class="main-grid">
+
+
+            <!-- =========================
+                 CONTACT FORM
+            ========================== -->
+
+            <div
+                class="card"
+                id="contact">
+
+                <h2>
+                    📩 Contact Me
+                </h2>
+
+                <p class="card-text">
+
+                    Fill out the form below
+                    to send me a message.
+
+                </p>
+
+
+                <form id="contactForm">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                        >
+
+                        <small id="nameError"></small>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@gmail.com"
+                        >
+
+                        <small id="emailError"></small>
+
+                    </div>
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="Enter subject"
+                        >
+
+                        <small id="subjectError"></small>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Write your message..."
+                        ></textarea>
+
+                        <small id="messageError"></small>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="submit-button">
+
+                        Submit Form
+
+                    </button>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <p
+                        id="successMessage"
+                        class="success-message">
+
+                    </p>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =========================
+                 TO-DO LIST
+            ========================== -->
+
+            <div
+                class="card"
+                id="todo">
+
+                <h2>
+                    ✅ My To-Do List
+                </h2>
+
+                <p class="card-text">
+
+                    Add your tasks and manage
+                    them using JavaScript.
+
+                </p>
+
+
+                <!-- TODO INPUT -->
+
+                <div class="todo-input">
+
+                    <input
+                        type="text"
+                        id="todoInput"
+                        placeholder="Enter a new task..."
+                    >
+
+                    <button
+                        id="addButton">
+
+                        Add
+
+                    </button>
+
+                </div>
+
+
+                <!-- TODO LIST -->
+
+                <ul id="todoList">
+
+                    <li class="empty-message">
+
+                        No tasks added yet.
+
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <div class="features">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📝
+                </div>
+
+                <h3>
+                    HTML Form
+                </h3>
+
+                <p>
+                    Different input fields
+                    and submit button.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+                    Form validation and
+                    DOM manipulation.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Responsive
+                </h3>
+
+                <p>
+                    Website adapts to
+                    phone and desktop screens.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <strong>Akshara Gandhi</strong>
+        </p>
+
+        <p>
+            Task 2 - Intermediate HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- Task 2 JavaScript -->
+
+    <script src="script2.js"></script>
+
+
+</body>
+
+</html>

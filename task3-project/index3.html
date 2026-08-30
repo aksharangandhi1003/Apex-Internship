@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akshara | Task 3</title>
+
+    <link rel="stylesheet" href="style3.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+            Akshara.
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#quiz">Quiz</a>
+            </li>
+
+            <li>
+                <a href="#api">API</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                Welcome to my Task 3 👋
+            </p>
+
+            <h1>
+                Hi, I'm
+                <span>Akshara Gandhi</span>
+            </h1>
+
+            <p class="hero-text">
+
+                AIML student passionate about
+                programming, artificial intelligence
+                and web development.
+
+            </p>
+
+            <a
+                href="#quiz"
+                class="hero-button">
+
+                Explore My Project
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="profile-circle">
+                AG
+            </div>
+
+            <h2>
+                AIML Student
+            </h2>
+
+            <p>
+                HTML • CSS • JavaScript • Python • AI
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+
+    <section id="about" class="section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                ABOUT ME
+            </p>
+
+            <h2>
+                My Technology Journey
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Learning to create modern,
+                    responsive and interactive
+                    websites.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Artificial Intelligence
+                </h3>
+
+                <p>
+                    Exploring AI and machine
+                    learning applications.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Developing programming and
+                    problem-solving skills.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTERACTIVE QUIZ
+    ========================== -->
+
+    <section
+        id="quiz"
+        class="section quiz-section">
+
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                JAVASCRIPT INTERACTION
+            </p>
+
+            <h2>
+                Test Your Web Knowledge 🧠
+            </h2>
+
+            <p>
+                Answer the questions and check your score.
+            </p>
+
+        </div>
+
+
+        <div class="quiz-box">
+
+
+            <div class="question-number">
+
+                Question
+                <span id="questionNumber">
+                    1
+                </span>
+                of 5
+
+            </div>
+
+
+            <h3 id="question">
+                Loading question...
+            </h3>
+
+
+            <div
+                id="answerButtons"
+                class="answer-buttons">
+
+            </div>
+
+
+            <p
+                id="quizResult"
+                class="quiz-result">
+
+            </p>
+
+
+            <button
+                id="nextButton"
+                class="next-button">
+
+                Next Question →
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         API SECTION
+    ========================== -->
+
+    <section
+        id="api"
+        class="section api-section">
+
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                JAVASCRIPT API
+            </p>
+
+            <h2>
+                Random Programming Joke 😂
+            </h2>
+
+            <p>
+                This section fetches live data
+                from a public API.
+            </p>
+
+        </div>
+
+
+        <div class="api-card">
+
+
+            <div class="api-icon">
+                ☁️
+            </div>
+
+
+            <p id="jokeText">
+
+                Click the button to load
+                a programming joke.
+
+            </p>
+
+
+            <p
+                id="jokePunchline"
+                class="punchline">
+
+            </p>
+
+
+            <button
+                id="jokeButton"
+                class="api-button">
+
+                Get a Random Joke
+
+            </button>
+
+
+            <p
+                id="apiStatus"
+                class="api-status">
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESPONSIVE SECTION
+    ========================== -->
+
+    <section class="responsive-demo">
+
+
+        <div class="responsive-content">
+
+            <p class="small-title">
+                RESPONSIVE DESIGN
+            </p>
+
+            <h2>
+                Built for Every Screen 📱💻
+            </h2>
+
+            <p>
+
+                This website uses CSS media queries
+                to automatically adjust its layout
+                for desktop, tablet and mobile devices.
+
+            </p>
+
+        </div>
+
+
+        <div class="screen-cards">
+
+            <div class="screen-card">
+                💻
+                <span>Desktop</span>
+            </div>
+
+            <div class="screen-card">
+                📱
+                <span>Mobile</span>
+            </div>
+
+            <div class="screen-card">
+                📲
+                <span>Tablet</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>
+            Akshara Gandhi
+        </h3>
+
+        <p>
+            Task 3 - Advanced Styling and JavaScript
+        </p>
+
+        <p>
+            HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script3.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - E-Commerce Website</title>
+
+    <!-- Separate CSS file -->
+    <link rel="stylesheet" href="style5.css">
+
+    <!-- JavaScript loaded after HTML -->
+    <script src="script5.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Shop<span>Ease</span>
+        </div>
+
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button id="themeBtn" aria-label="Change theme">🌙</button>
+            <button id="cartBtn">
+                🛒 Cart <span id="cartCount">0</span>
+            </button>
+            <button id="menuBtn" class="menu-btn">☰</button>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO SHOPEASE</p>
+
+            <h1>
+                Shop Smart.<br>
+                Live Better.
+            </h1>
+
+            <p>
+                Discover quality products at amazing prices.
+                Simple, fast and reliable shopping experience.
+            </p>
+
+            <a href="#products" class="hero-btn">
+                Shop Now →
+            </a>
+
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-icon">🛍️</div>
+            <h2>Summer Sale</h2>
+            <p>Up to 40% OFF</p>
+            <span>Limited Time Offer</span>
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+            <div>🚚</div>
+            <h3>Free Delivery</h3>
+            <p>On orders above ₹999</p>
+        </div>
+
+        <div class="feature">
+            <div>🔒</div>
+            <h3>Secure Payment</h3>
+            <p>100% secure checkout</p>
+        </div>
+
+        <div class="feature">
+            <div>↩️</div>
+            <h3>Easy Returns</h3>
+            <p>7-day return policy</p>
+        </div>
+
+        <div class="feature">
+            <div>⭐</div>
+            <h3>Top Quality</h3>
+            <p>Trusted products</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <main id="products" class="products-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">OUR COLLECTION</p>
+
+            <h2>Featured Products</h2>
+
+            <p>
+                Find your favorite products from our collection.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER AREA -->
+
+        <div class="filter-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search products..."
+            >
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="accessories">Accessories</option>
+                <option value="home">Home</option>
+            </select>
+
+            <select id="sortFilter">
+                <option value="default">Sort By</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="rating">Highest Rating</option>
+                <option value="name">Name: A-Z</option>
+            </select>
+
+        </div>
+
+
+        <!-- PRODUCT GRID -->
+
+        <div id="productGrid" class="product-grid"></div>
+
+        <p id="noProducts" class="no-products">
+            No products found.
+        </p>
+
+    </main>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <div class="about-content">
+
+            <p class="small-title">ABOUT US</p>
+
+            <h2>Shopping Made Simple</h2>
+
+            <p>
+                ShopEase is a modern e-commerce platform created to
+                provide customers with a simple and enjoyable shopping
+                experience.
+            </p>
+
+            <p>
+                We offer carefully selected products, secure shopping,
+                easy returns and excellent customer service.
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <strong>500+</strong>
+                    <span>Products</span>
+                </div>
+
+                <div>
+                    <strong>10K+</strong>
+                    <span>Customers</span>
+                </div>
+
+                <div>
+                    <strong>4.8★</strong>
+                    <span>Rating</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">GET IN TOUCH</p>
+
+            <h2>Contact Us</h2>
+
+            <p>Have a question? We'd love to hear from you.</p>
+
+        </div>
+
+
+        <form id="contactForm" class="contact-form">
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                >
+
+            </div>
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+            <p id="formMessage"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= CART SIDEBAR ================= -->
+
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <aside id="cartSidebar" class="cart-sidebar">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button id="closeCart">✕</button>
+
+        </div>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong>₹<span id="cartTotal">0</span></strong>
+            </div>
+
+            <button id="checkoutBtn" class="checkout-btn">
+                Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Shop<span>Ease</span>
+        </div>
+
+        <p>
+            © 2026 ShopEase. All rights reserved.
+        </p>
+
+        <div class="social">
+            <span>Instagram</span>
+            <span>Facebook</span>
+            <span>Twitter</span>
+        </div>
+
+    </footer>
+
+</body>
+</html>
